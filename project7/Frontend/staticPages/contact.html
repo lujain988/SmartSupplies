@@ -166,22 +166,22 @@
 						<form method="POST" id="form">
 							<div class="form-row">
 								<div class="form-group col-md-6">
-									<input type="text" class="form-control" placeholder="Name" name="Name" id="name">
+									<input type="text" class="form-control" placeholder="Name" name="name" id="name">
 								</div>
 								<div class="form-group col-md-6">
-									<input type="email" class="form-control" placeholder="Email" name="Email" id="email">
+									<input type="email" class="form-control" placeholder="Email" name="email" id="email">
 								</div>
 							</div>
 							<div class="form-row">
 								<div class="form-group col-md-6">
-									<input type="tel" class="form-control" placeholder="Phone" name="PhoneNumber" id="phone">
+									<input type="tel" class="form-control" placeholder="Phone" name="phoneNumber" id="phone">
 								</div>
 								<div class="form-group col-md-6">
-									<input type="text" class="form-control" placeholder="Subject" name="Subject" id="subject">
+									<input type="text" class="form-control" placeholder="Subject" name="subject" id="subject">
 								</div>
 							</div>
 							<div class="form-group">
-								<textarea class="form-control" name="Message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+								<textarea class="form-control" name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
 							</div>
 							<button type="button" class="btn btn-primary" onclick="sendMessage()">Submit</button>
 						</form>
@@ -291,7 +291,7 @@
 	</div>
 	<!-- end copyright -->
 	<script>
-		const url = "https://localhost:44390/api/ContactUs1";
+		const url ="https://localhost:44381/api/ContactUs1";
 		var form = document.getElementById("form");
 		async function sendMessage() {
 			debugger;

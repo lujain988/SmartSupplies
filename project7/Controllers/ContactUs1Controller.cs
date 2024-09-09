@@ -72,8 +72,7 @@ namespace project7.Controllers
             {
                 return BadRequest("Contact form data is required.");
             }
-            var user = _context.Users.FirstOrDefault(u => u.Email == contactUsDto.Email);
-            var userIddb = user?.Id;
+         
 
             var contactForm = new ContactU
             {
@@ -83,7 +82,7 @@ namespace project7.Controllers
                 Email = contactUsDto.Email,
                 Message = contactUsDto.Message,
                 CreatedAt = DateTime.Now,
-                UsersId = userIddb
+           
 
             };
 
