@@ -1,0 +1,12 @@
+2024-09-10 22:31:20.529 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44381/api/Cart/copon/new2024 - null null
+2024-09-10 22:31:20.531 +03:00 [INF] CORS policy execution successful.
+2024-09-10 22:31:20.533 +03:00 [INF] Executing endpoint 'project7.Controllers.CartController.chickcopobn (project7)'
+2024-09-10 22:31:20.534 +03:00 [INF] Route matched with {action = "chickcopobn", controller = "Cart"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult chickcopobn(System.String) on controller project7.Controllers.CartController (project7).
+2024-09-10 22:31:20.542 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__name_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [v].[ID], [v].[Code], [v].[DiscountAmount], [v].[ExpirationDate], [v].[IsActive], [v].[OrderID]
+FROM [Vouchers] AS [v]
+WHERE [v].[Code] = @__name_0 AND [v].[ExpirationDate] >= GETDATE() AND [v].[IsActive] = CAST(1 AS bit)
+2024-09-10 22:31:20.547 +03:00 [INF] Executing OkObjectResult, writing value of type 'project7.Models.Voucher'.
+2024-09-10 22:31:20.547 +03:00 [INF] Executed action project7.Controllers.CartController.chickcopobn (project7) in 13.6128ms
+2024-09-10 22:31:20.547 +03:00 [INF] Executed endpoint 'project7.Controllers.CartController.chickcopobn (project7)'
+2024-09-10 22:31:20.548 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44381/api/Cart/copon/new2024 - 200 null application/json; charset=utf-8 18.585ms

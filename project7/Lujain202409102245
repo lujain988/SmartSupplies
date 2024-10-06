@@ -1,0 +1,46 @@
+2024-09-10 22:45:25.197 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44381/api/Order/GetCart/11 - null null
+2024-09-10 22:45:25.203 +03:00 [INF] CORS policy execution successful.
+2024-09-10 22:45:25.204 +03:00 [INF] Executing endpoint 'project7.Controllers.OrderController.GetCartByUserId (project7)'
+2024-09-10 22:45:25.204 +03:00 [INF] Route matched with {action = "GetCartByUserId", controller = "Order"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult GetCartByUserId(Int32) on controller project7.Controllers.OrderController (project7).
+2024-09-10 22:45:25.238 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[UserID] AS [UserId], [c].[ProductID] AS [ProductId], [c].[Quantity], [p].[ProductName], [p].[Price]
+FROM [Cart] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[ProductID] = [p].[ID]
+WHERE [c].[UserID] = @__id_0
+2024-09-10 22:45:25.238 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[project7.DTOs.CartRequestDTO, project7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-10 22:45:25.239 +03:00 [INF] Executed action project7.Controllers.OrderController.GetCartByUserId (project7) in 34.773ms
+2024-09-10 22:45:25.239 +03:00 [INF] Executed endpoint 'project7.Controllers.OrderController.GetCartByUserId (project7)'
+2024-09-10 22:45:25.239 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44381/api/Order/GetCart/11 - 200 null application/json; charset=utf-8 41.669ms
+2024-09-10 22:45:25.289 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44381/swagger/index.html - null null
+2024-09-10 22:45:25.293 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44381/swagger/index.html - 200 null text/html;charset=utf-8 3.7161ms
+2024-09-10 22:45:25.300 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44381/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-10 22:45:25.300 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44381/_vs/browserLink - null null
+2024-09-10 22:45:25.301 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44381/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 0.6869ms
+2024-09-10 22:45:25.306 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44381/_vs/browserLink - 200 null text/javascript; charset=UTF-8 5.6103ms
+2024-09-10 22:45:25.394 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44381/swagger/v1/swagger.json - null null
+2024-09-10 22:45:25.409 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44381/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 14.6032ms
+2024-09-10 22:45:29.953 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44381/api/Order/GetAllOrdersByUserId/11 - null null
+2024-09-10 22:45:29.953 +03:00 [INF] CORS policy execution successful.
+2024-09-10 22:45:29.953 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44381/api/User/GetUserById/11 - null null
+2024-09-10 22:45:29.953 +03:00 [INF] CORS policy execution successful.
+2024-09-10 22:45:29.964 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44381/api/Order/GetAllOrdersByUserId/11 - 404 null null 11.1909ms
+2024-09-10 22:45:29.964 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44381/api/Order/GetAllOrdersByUserId/11, Response status code: 404
+2024-09-10 22:45:29.955 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44381/api/User/GetUserById/11 - 204 null null 2.1717ms
+2024-09-10 22:45:29.969 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44381/api/User/GetUserById/11 - application/json null
+2024-09-10 22:45:29.972 +03:00 [INF] CORS policy execution successful.
+2024-09-10 22:45:29.985 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '9/10/2024 7:20:03 PM', Current time (UTC): '9/10/2024 7:45:29 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-09-10 22:45:29.987 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '9/10/2024 7:20:03 PM', Current time (UTC): '9/10/2024 7:45:29 PM'.
+2024-09-10 22:45:29.987 +03:00 [INF] Executing endpoint 'project7.Controllers.UserController.GetUserById (project7)'
+2024-09-10 22:45:29.987 +03:00 [INF] Route matched with {action = "GetUserById", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUserById(Int32) on controller project7.Controllers.UserController (project7).
+2024-09-10 22:45:29.999 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[ID], [u].[CreatedAt], [u].[Email], [u].[IsAdmin], [u].[LoyaltyPoints], [u].[PasswordHash], [u].[PasswordSalt], [u].[Role], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[ID] = @__p_0
+2024-09-10 22:45:29.999 +03:00 [INF] Executing OkObjectResult, writing value of type 'project7.Models.User'.
+2024-09-10 22:45:30.000 +03:00 [INF] Executed action project7.Controllers.UserController.GetUserById (project7) in 12.1779ms
+2024-09-10 22:45:30.000 +03:00 [INF] Executed endpoint 'project7.Controllers.UserController.GetUserById (project7)'
+2024-09-10 22:45:30.000 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44381/api/User/GetUserById/11 - 200 null application/json; charset=utf-8 30.8728ms

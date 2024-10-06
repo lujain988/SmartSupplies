@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- title -->
+    <title>Smart Supplies</title>
+
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="Frontend/assets/img/logo.png"
+    />
+    <!-- google font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="Frontend/assets/css/all.min.css" />
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="Frontend/assets/bootstrap/css/bootstrap.min.css"
+    />
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="Frontend/assets/css/owl.carousel.css" />
+    <!-- magnific popup -->
+    <link rel="stylesheet" href="Frontend/assets/css/magnific-popup.css" />
+    <!-- animate css -->
+    <link rel="stylesheet" href="Frontend/assets/css/animate.css" />
+    <!-- mean menu css -->
+    <link rel="stylesheet" href="Frontend/assets/css/meanmenu.min.css" />
+    <!-- main style -->
+    <link rel="stylesheet" href="Frontend/assets/css/main.css" />
+    <!-- responsive -->
+    <link rel="stylesheet" href="Frontend/assets/css/responsive.css" />
+    <style>#ordersCard{
+     width: 400px;
+      height: 300px; /* Fixed height */
+      overflow-y: auto; /* Enable vertical scroll when content exceeds height */
+      overflow-x: auto; /* Hide horizontal overflow */
+      white-space: normal; /* Allow text to wrap onto multiple lines */
+    }
+    
+    </style>
+  </head>
+  <body>
+<!--PreLoader-->
+<div class="loader">
+  <div class="loader-inner">
+    <div class="circle"></div>
+  </div>
+</div>
+<!--PreLoader Ends-->
+
+<!-- header -->
+<div class="top-header-area" id="sticker">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-sm-12 text-center">
+        <div class="main-menu-wrap">
+          <!-- logo -->
+          <div class="site-logo">
+            <a href="index_2.html">
+              <img src="Frontend/assets/img/Smart.png" alt="" />
+            </a>
+          </div>
+          <!-- logo -->
+
+          <!-- menu start -->
+          <nav class="main-menu">
+            <ul id="navList">
+              <li><a href="index_2.html">Home</a></li>
+              <li>
+                <a href="Frontend/categories.html">Categories</a>
+              </li>
+              <li><a href="Product/Product.html">Shop</a></li>
+              <li><a href="staticPages/about.html">About</a></li>
+              <li><a href="staticPages/contact.html">Contact</a></li>
+
+
+            </ul>
+          </nav>
+
+          <div class="mobile-menu"></div>
+          <!-- menu end -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end header -->
+
+    <!-- search area -->
+    <div class="search-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <span class="close-btn"><i class="fas fa-window-close"></i></span>
+            <div class="search-bar">
+              <div class="search-bar-tablecell">
+                <h3>Search For:</h3>
+                <input type="text" placeholder="Keywords" />
+                <button type="submit">
+                  Search <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end search area -->
+
+    <div
+      style="
+        height: 100%;
+        width: 100%;
+        background-color: black;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url(Frontend/assets/img/slider_5.jpg);
+        background-size: cover;
+        padding: 120px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      "
+    >
+      <div
+        style="
+          width: 500px;
+          height: fit-content;
+          background-color: rgba(255, 255, 255, 0.741);
+          border-radius: 2%;
+        "
+      >
+        <div style="margin: 50px" id="profileCard"></div>
+      </div>
+
+      <div
+        style="
+          width: 500px;
+          height: fit-content;
+          background-color: rgba(255, 255, 255, 0.741);
+          border-radius: 2%;
+        "
+      >
+        <div style="margin: 50px" id="ordersCard" >
+          <h3>Your Orders</h3>
+          <table class="table table-bordered table-hover table-responsive-sm table-sm shadow-sm" >
+            <thead class="text-center">
+              <tr>
+                <th scope="col" class="table-warning">User Name</th>
+                <th scope="col" class="table-warning">Discount Amount</th>
+                <th scope="col" class="table-warning">Status</th>
+                <th scope="col" class="table-warning">TotalAmount</th>
+                <th scope="col" class="table-warning">OrderDate</th>
+              </tr>
+            </thead>
+            <tbody id="getorder" class="text-center"  >
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-box about-widget">
+              <h2 class="widget-title">About us</h2>
+              <p>
+                At Smart supplies, we design durable, stylish, and
+                functional school bags for students of all ages. Since [Year],
+                we've been committed to providing high-quality, eco-friendly
+                products that combine comfort and practicality.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-box get-in-touch">
+              <h2 class="widget-title">Get in Touch</h2>
+              <ul>
+                <li>Irbid, Jordan.</li>
+                <li>support@SmartSupplies.com</li>
+                <li>+962772816672</li>
+              </ul>
+            </div>
+            
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-box pages">
+              <h2 class="widget-title">Pages</h2>
+              <ul>
+                <li><a href="index_2.html">Home</a></li>
+                <li><a href="staticPages/about.html">About</a></li>
+                <li><a href="Product/Product.html">Shop</a></li>
+
+                <li><a href="staticPages/contact.html">Contact</a></li>
+                <li><a href="staticPages/polices.html">Polices</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-box subscribe">
+              <h2 class="widget-title">Subscribe</h2>
+              <p>Subscribe to our mailing list to get the latest updates.</p>
+              <form action="index.html">
+                <input type="email" placeholder="Email" />
+                <button type="submit">
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end footer -->
+
+    <!-- copyright -->
+    <div class="copyright">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-12">
+            <p>
+              Copyrights &copy; 2024 -
+              <a >SmartSupplies</a>, All Rights
+              Reserved.<br />
+              Distributed By - <a >Orange</a>
+            </p>
+          </div>
+          <div class="col-lg-6 text-right col-md-12">
+            <div class="social-icons">
+              <ul>
+                <li>
+                  <a href="#" target="_blank"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#" target="_blank"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" target="_blank"
+                    ><i class="fab fa-linkedin"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" target="_blank"
+                    ><i class="fab fa-dribbble"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end copyright -->
+    <script>
+      function navbar() {
+  
+        var nav = document.getElementById("navList");
+        var loggeduser = localStorage.getItem("jwtToken");
+
+        if (loggeduser == undefined || loggeduser == null) {
+          nav.innerHTML += `
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+				<li>
+            <div class="header-icons">
+              <a class="shopping-cart" href="Cart/Cart.html">
+                <i class="fas fa-shopping-cart"></i>
+              </a>
+            </div>
+          </li>
+            `;
+        } else {
+          nav.innerHTML += `
+          <li><a href="profile.html">Profile</a></li>
+		  <li><a href="#" onclick="logout()">Logout</a></li>
+                <li>
+            <div class="header-icons">
+              <a class="shopping-cart" href="Cart/Cart.html">
+                <i class="fas fa-shopping-cart"></i>
+              </a>
+            </div>
+          </li>
+            `;
+        }
+      }
+
+      navbar();
+      async function getUser() {
+    
+        let userid = localStorage.getItem("UserId");
+        try {
+          let response = await fetch(
+            `https://localhost:44381/api/User/GetUserById/${userid}`,
+            {
+              method: "GET",
+              headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${localStorage.getItem("jwtToken")}`,
+              },
+            }
+          );
+          if (!response.ok) {
+            throw new Error("HTTP error!");
+          }
+          let json = await response.json();
+          document.getElementById("profileCard").innerHTML = `
+        <h3>WELCOME, ${json.username}</h3>
+        <br/>
+        <p>Your Email IS: ${json.email}</p>
+        <p>Your loyality points: ${json.loyaltyPoints}</p>
+        <p>Member sence: ${json.createdAt}</p>
+        <a class="boxed-btn" href="editProfile.html">Edit Profile</a>
+        
+      `;
+        } catch (error) {
+          console.error("Error:", error);
+        }
+      }
+      getUser();
+
+      async function Allorders() {
+        let id = localStorage.getItem("UserId");
+    const url = `https://localhost:44381/api/Order/GetAllOrdersByUserId/${id}`;
+    let response = await fetch(url);
+    let data = await response.json();
+    console.log(data);
+    data.forEach(element => {
+        let Orders = document.getElementById("getorder");
+        Orders.innerHTML += `
+        
+
+  <tr>
+    <td >${element.userOrderDTO.username}</td>
+    <td>${element.vouchers.discountAmount}</td>
+    <td >${element.status}</td>
+    <td>${element.totalAmount}</td>
+    <td >${element.orderDate}</td>
+  </tr>
+
+
+         `
+        });
+    
+}
+Allorders();
+      
+      function logout() {
+		  localStorage.removeItem("jwtToken");
+		  localStorage.removeItem("UserId");
+		  window.location.href = "index_2.html";
+	  }
+     
+    </script>
+    <!-- jquery -->
+    <script src="Frontend/assets/js/jquery-1.11.3.min.js"></script>
+    <!-- bootstrap -->
+    <script src="Frontend/assets/bootstrap/js/bootstrap.min.js"></script>
+    <!-- count down -->
+    <script src="Frontend/assets/js/jquery.countdown.js"></script>
+    <!-- isotope -->
+    <script src="Frontend/assets/js/jquery.isotope-3.0.6.min.js"></script>
+    <!-- waypoints -->
+    <script src="Frontend/assets/js/waypoints.js"></script>
+    <!-- owl carousel -->
+    <script src="Frontend/assets/js/owl.carousel.min.js"></script>
+    <!-- magnific popup -->
+    <script src="Frontend/assets/js/jquery.magnific-popup.min.js"></script>
+    <!-- mean menu -->
+    <script src="Frontend/assets/js/jquery.meanmenu.min.js"></script>
+    <!-- sticker js -->
+    <script src="Frontend/assets/js/sticker.js"></script>
+    <!-- main js -->
+    <script src="Frontend/assets/js/main.js"></script>
+  </body>
+</html>

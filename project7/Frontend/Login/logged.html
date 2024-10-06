@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Logged In</title>
+</head>
+<body>
+  <h1>Welcome!</h1>
+  <div id="user-info"></div>
+
+  <script>
+    // Retrieve user data from localStorage
+    const user = JSON.parse(localStorage.getItem('user'));
+    const userInfoDiv = document.getElementById('user-info');
+    
+    if (user) {
+      userInfoDiv.innerHTML = `
+        <p>User ID: ${user.uid}</p>
+        <p>Name: ${user.displayName}</p>
+        <p>Email: ${user.email}</p>
+        <img src="${user.photoURL}" alt="User Photo" width="100" />
+      `;
+    } else {
+      userInfoDiv.innerHTML = '<p>No user data found. Please log in again.</p>';
+    }
+  </script>
+</body>
+</html>

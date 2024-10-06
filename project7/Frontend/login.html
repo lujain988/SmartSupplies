@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- title -->
+    <title>Smart Supplies</title>
+
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="Frontend/assets/img/logo.png"
+    />
+    <!-- google font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="Frontend/assets/css/all.min.css" />
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="Frontend/assets/bootstrap/css/bootstrap.min.css"
+    />
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="Frontend/assets/css/owl.carousel.css" />
+    <!-- magnific popup -->
+    <link rel="stylesheet" href="Frontend/assets/css/magnific-popup.css" />
+    <!-- animate css -->
+    <link rel="stylesheet" href="Frontend/assets/css/animate.css" />
+    <!-- mean menu css -->
+    <link rel="stylesheet" href="Frontend/assets/css/meanmenu.min.css" />
+    <!-- main style -->
+    <link rel="stylesheet" href="Frontend/assets/css/main.css" />
+    <!-- responsive -->
+    <link rel="stylesheet" href="Frontend/assets/css/responsive.css" />
+  </head>
+  <body>
+    <!--PreLoader-->
+    <div class="loader">
+      <div class="loader-inner">
+        <div class="circle"></div>
+      </div>
+    </div>
+    <!--PreLoader Ends-->
+
+    <!--PreLoader-->
+    <div class="loader">
+      <div class="loader-inner">
+        <div class="circle"></div>
+      </div>
+    </div>
+    <!--PreLoader Ends-->
+
+    <!-- header -->
+    <div class="top-header-area" id="sticker">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-sm-12 text-center">
+            <div class="main-menu-wrap">
+              <!-- logo -->
+              <div class="site-logo">
+                <a href="index_2.html">
+                  <img src="Frontend/assets/img/Smart.png" alt="" />
+                </a>
+              </div>
+              <!-- logo -->
+
+              <!-- menu start -->
+              <nav class="main-menu">
+                <ul id="navList">
+                  <li><a href="index_2.html">Home</a></li>
+                  <li>
+                    <a href="Frontend/categories.html">Categories</a>
+                  </li>
+                  <li><a href="Product/Product.html">Shop</a></li>
+
+                  <li><a href="staticPages/about.html">About</a></li>
+                  <li><a href="staticPages/contact.html">Contact</a></li>
+                </ul>
+              </nav>
+
+              <div class="mobile-menu"></div>
+              <!-- menu end -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end header -->
+    <!-- end header -->
+
+    <!-- search area -->
+    <div class="search-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <span class="close-btn"><i class="fas fa-window-close"></i></span>
+            <div class="search-bar">
+              <div class="search-bar-tablecell">
+                <h3>Search For:</h3>
+                <input type="text" placeholder="Keywords" />
+                <button type="submit">
+                  Search <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end search area -->
+
+    <div
+      style="
+        height: 100%;
+        width: 100%;
+        background-color: black;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url(Frontend/assets/img/slider_5.jpg);
+        background-size: cover;
+        padding: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <div
+        style="
+          width: 500px;
+          height: fit-content;
+          background-color: rgba(255, 255, 255, 0.741);
+          border-radius: 2%;
+        "
+      >
+        <div style="margin: 50px">
+          <h3>Login</h3>
+          <br />
+          <form id="loginForm">
+            <div class="mb-3">
+              <label for="exampleInputEmail" class="form-label">Email:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                name="Email"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="pass" class="form-label">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="pass"
+                aria-describedby="emailHelp"
+                name="Password"
+              />
+            </div>
+
+            <div id="message"></div>
+            <button id="google-login-btn" class="google-button btn btn-primary">
+              Login With Google
+            </button>
+            <br /><br/>
+            <a href="generateOtp.html">Forgot your password?</a>
+            <div class="mb-3 form-check"></div>
+
+            <button type="submit" onclick="Login()" class="btn btn-primary">
+              Login
+            </button>
+          </form>
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-box about-widget">
+              <h2 class="widget-title">About us</h2>
+              <p>
+                At Smart supplies, we design durable, stylish, and functional
+                school bags for students of all ages. Since [Year], we've been
+                committed to providing high-quality, eco-friendly products that
+                combine comfort and practicality.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-box get-in-touch">
+              <h2 class="widget-title">Get in Touch</h2>
+              <ul>
+                <li>Irbid, Jordan.</li>
+                <li>support@SmartSupplies.com</li>
+                <li>+962772816672</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-box pages">
+              <h2 class="widget-title">Pages</h2>
+              <ul>
+                <li><a href="index_2.html">Home</a></li>
+                <li><a href="staticPages/about.html">About</a></li>
+                <li><a href="Product/Product.html">Shop</a></li>
+
+                <li><a href="staticPages/contact.html">Contact</a></li>
+                <li><a href="staticPages/polices.html">Polices</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-box subscribe">
+              <h2 class="widget-title">Subscribe</h2>
+              <p>Subscribe to our mailing list to get the latest updates.</p>
+              <form action="index.html">
+                <input type="email" placeholder="Email" />
+                <button type="submit">
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end footer -->
+
+    <!-- copyright -->
+    <div class="copyright">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-12">
+            <p>
+              Copyrights &copy; 2024 -
+              <a>SmartSupplies</a>, All Rights Reserved.<br />
+              Distributed By - <a>Orange</a>
+            </p>
+          </div>
+          <div class="col-lg-6 text-right col-md-12">
+            <div class="social-icons">
+              <ul>
+                <li>
+                  <a href="#" target="_blank"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#" target="_blank"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" target="_blank"
+                    ><i class="fab fa-linkedin"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" target="_blank"
+                    ><i class="fab fa-dribbble"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end copyright -->
+    <script>
+      function navbar() {
+        var nav = document.getElementById("navList");
+        var loggeduser = localStorage.getItem("jwtToken");
+
+        if (loggeduser == undefined || loggeduser == null) {
+          nav.innerHTML += `
+                  <li><a href="login.html">Login</a></li>
+                  <li><a href="register.html">Register</a></li>
+              `;
+        } else {
+          nav.innerHTML += `
+                  <li>
+              <div class="header-icons">
+                <a class="shopping-cart" href="../Cart/Cart.html">
+                  <i class="fas fa-shopping-cart"></i>
+                </a>
+              </div>
+            </li>
+              `;
+        }
+      }
+
+      async function Login() {
+        event.preventDefault();
+        const form = document.getElementById("loginForm");
+        const formData = new FormData(form);
+        const message = document.getElementById("message");
+
+        try {
+          // Make the login request
+          const response = await fetch(
+            "https://localhost:44381/api/User/Login",
+            {
+              method: "POST",
+              body: formData,
+            }
+          );
+
+          if (response.status === 200) {
+            const data = await response.json();
+            console.log("Login Data:", data);
+
+            const userId = data.userId; // Extract userId here
+            localStorage.setItem("jwtToken", data.token);
+            localStorage.setItem("UserId", userId);
+
+            // Fetch the cart from the server using the user's ID
+            const cartUrl = `https://localhost:44381/api/Cart/getallitems/${userId}`;
+            const serverCartResponse = await fetch(cartUrl);
+
+            let serverCart = [];
+            if (serverCartResponse.ok) {
+              serverCart = await serverCartResponse.json();
+              console.log("Server Cart:", serverCart);
+            } else {
+              const errorText = await serverCartResponse.text();
+              console.error("Failed to fetch server cart:", errorText);
+              message.innerHTML =
+                "<p style='color:red;'>Failed to fetch server cart</p>";
+              return; // Exit if the cart fetch fails
+            }
+
+            const localCart = JSON.parse(localStorage.getItem("cart")) || [];
+            console.log("Local Cart:", localCart);
+
+            if (localCart.length > 0) {
+              const mergedCart = mergeCarts(localCart, serverCart);
+              console.log("Merged Cart:", mergedCart);
+
+              const updateCartUrl =
+                "https://localhost:44381/api/Cart/cartitem/updateMulti";
+              const cartRequest = mergedCart.map((item) => ({
+                userId: userId,
+                productId: item.productId,
+                quantity: item.quantity,
+              }));
+
+              const updateResponse = await fetch(updateCartUrl, {
+                method: "PUT",
+                body: JSON.stringify(cartRequest),
+                headers: {
+                  "Content-Type": "application/json",
+                },
+              });
+
+              if (!updateResponse.ok) {
+                const errorMessage = await updateResponse.text();
+                console.error("Cart update failed:", errorMessage);
+                message.innerHTML =
+                  "<p style='color:red;'>Cart update failed</p>";
+              } else {
+                const updateResult = await updateResponse.json();
+                console.log("Cart update result:", updateResult);
+              }
+
+              // Optionally, clear the cart from localStorage after syncing with the server
+              localStorage.removeItem("cart");
+            }
+
+            if (data.userRole === "User") {
+              window.history.back();
+            } else if (data.userRole === "Admin") {
+              window.location.href = "Admin/index1.html";
+            }
+          } else {
+            const errorText = await response.text();
+            console.error("Login failed:", errorText);
+            message.innerHTML = "<p style='color:red;'>Login failed</p>";
+          }
+        } catch (error) {
+          console.error("An unexpected error occurred:", error);
+          message.innerHTML =
+            "<p style='color:red;'>An unexpected error occurred</p>";
+        }
+        console.log("User Role:", data.userRole);
+      }
+
+      function mergeCarts(localCart, serverCart) {
+        const mergedCart = [...serverCart];
+
+        localCart.forEach((localItem) => {
+          const existingItem = mergedCart.find(
+            (serverItem) => serverItem.productId === localItem.id
+          );
+
+          if (existingItem) {
+            existingItem.quantity += localItem.quantity;
+          } else {
+            mergedCart.push({
+              id: localItem.id,
+              userId: localItem.userId || 0,
+              quantity: localItem.quantity,
+              productId: localItem.id,
+              product: {
+                productName: localItem.productName,
+                price: localItem.price,
+                image: localItem.image,
+              },
+            });
+          }
+        });
+
+        return mergedCart;
+      }
+
+      function navbar() {
+        debugger;
+        var nav = document.getElementById("navList");
+        var loggeduser = localStorage.getItem("jwtToken");
+
+        if (loggeduser == undefined || loggeduser == null) {
+          nav.innerHTML += `
+                  <li><a href="login.html">Login</a></li>
+                  <li><a href="register.html">Register</a></li>
+                  		<li>
+            <div class="header-icons">
+              <a class="shopping-cart" href="../Cart/Cart.html">
+                <i class="fas fa-shopping-cart"></i>
+              </a>
+            </div>
+          </li>
+              `;
+        } else {
+          nav.innerHTML += `
+                   <li><a href="profile.html">Profile</a></li>
+		  <li><a href="#" onclick="logout()">Logout</a></li>
+          <li>
+              <div class="header-icons">
+                <a class="shopping-cart" href="../Cart/Cart.html">
+                  <i class="fas fa-shopping-cart"></i>
+                </a>
+              </div>
+            </li>
+              `;
+        }
+      }
+
+      navbar();
+</script>
+
+    <!-- jquery -->
+    <script src="Frontend/assets/js/jquery-1.11.3.min.js"></script>
+    <!-- bootstrap -->
+    <script src="Frontend/assets/bootstrap/js/bootstrap.min.js"></script>
+    <!-- count down -->
+    <script src="Frontend/assets/js/jquery.countdown.js"></script>
+    <!-- isotope -->
+    <script src="Frontend/assets/js/jquery.isotope-3.0.6.min.js"></script>
+    <!-- waypoints -->
+    <script src="Frontend/assets/js/waypoints.js"></script>
+    <!-- owl carousel -->
+    <script src="Frontend/assets/js/owl.carousel.min.js"></script>
+    <!-- magnific popup -->
+    <script src="Frontend/assets/js/jquery.magnific-popup.min.js"></script>
+    <!-- mean menu -->
+    <script src="Frontend/assets/js/jquery.meanmenu.min.js"></script>
+    <!-- sticker js -->
+    <script src="Frontend/assets/js/sticker.js"></script>
+    <!-- main js -->
+    <script src="Frontend/assets/js/main.js"></script>
+    <script type="module" src="main.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,4 @@
+2024-09-10 22:16:08.491 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44381/api/Order/AddNewOrderByUserId - null null
+2024-09-10 22:16:08.547 +03:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-09-10 22:16:08.547 +03:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-09-10 22:16:08.548 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44381/api/Order/AddNewOrderByUserId - 405 null null 56.6242ms

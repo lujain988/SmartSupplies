@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Basic Page Info -->
+	<meta charset="utf-8" />
+	<title>DeskApp - Bootstrap Admin Dashboard HTML Template</title>
+
+	<!-- Site favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="../vendors/images/apple-touch-icon.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="../vendors/images/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="../vendors/images/favicon-16x16.png" />
+
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+		rel="stylesheet" />
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="../vendors/styles/core.css" />
+	<link rel="stylesheet" type="text/css" href="../vendors/styles/icon-font.min.css" />
+	<link rel="stylesheet" type="text/css" href="../src/plugins/datatables/css/dataTables.bootstrap4.min.css" />
+	<link rel="stylesheet" type="text/css" href="../src/plugins/datatables/css/responsive.bootstrap4.min.css" />
+	<link rel="stylesheet" type="text/css" href="../vendors/styles/style.css" />
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-GBZ3SGGX85"></script>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2973766580778258"
+		crossorigin="anonymous"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag("js", new Date());
+
+		gtag("config", "G-GBZ3SGGX85");
+	</script>
+	<!-- Google Tag Manager -->
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s),
+				dl = l != "dataLayer" ? "&l=" + l : "";
+			j.async = true;
+			j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, "script", "dataLayer", "GTM-NXZMQSS");
+	</script>
+	<!-- End Google Tag Manager -->
+</head>
+
+<body>
+
+	<div class="header">
+		<div class="header-left">
+			<div class="menu-icon bi bi-list"></div>
+			<div class="search-toggle-icon bi bi-search" data-toggle="header_search"></div>
+		
+		</div>
+		<div class="header-right">
+			<div class="dashboard-setting user-notification">
+				<div class="dropdown">
+					<a class="dropdown-toggle no-arrow" href="javascript:;" data-toggle="right-sidebar">
+					
+					</a>
+				</div>
+			</div>
+	
+			<div class="user-info-dropdown">
+				<div class="dropdown">
+					<a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+						
+						<span class="user-name">Lujain</span>
+					</a>
+					<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+					
+						<a class="dropdown-item" onclick="logout()"><i class="dw dw-logout"></i> Log Out</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div class="left-side-bar">
+		<div class="brand-logo">
+			<a href="../index1.html">
+				<img src="../vendors/images/Smart1.png" alt="" class="dark-logo" />
+				<img src="../vendors/images/Smart.png"  class="light-logo" />
+			</a>
+			
+			<div class="close-sidebar" data-toggle="left-sidebar-close">
+				<i class="ion-close-round"></i>
+			</div>
+		</div>
+		<div class="menu-block customscroll">
+			<div class="sidebar-menu">
+				<ul id="accordion-menu">
+					<li class="dropdown">
+						<a href="../index1.html" class="dropdown-toggle  no-arrow">
+							<span class="micon bi bi-house"></span><span class="mtext">Home</span>
+						</a>
+					</li>
+					<li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
+						  <span class="micon bi bi-file-earmark-text"></span
+						  ><span class="mtext">User </span>
+						</a>
+						<ul class="submenu">
+						  <li><a href="../Users/allUsers.html">ALL Users</a></li>
+					 
+						</ul>
+					  </li>
+				
+					
+					<li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
+							<span class="micon bi bi-file-earmark-text"></span><span class="mtext">Category
+								</span>
+						</a>
+						<ul class="submenu">
+							<li><a href="../Category/AllCategory.html">ALL Category</a></li>
+							<li><a href="../Category/AddCategory.html">Add Category</a></li>
+							
+							
+						</ul>
+					</li>
+
+                     
+                    <li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
+							<span class="micon bi bi-file-earmark-text"></span><span class="mtext">Product
+								</span>
+						</a>
+						<ul class="submenu">
+							<li><a href="../Product/allProduct.html">ALLproduct</a></li>
+							<li><a href="../Product/addProduct.html">Add product</a></li>
+							<li><a href="../Product/applayDisount.html">Applay Discount</a></li>
+						</ul>
+
+					</li>
+
+
+					<li>
+						<a href="javascript:;" class="dropdown-toggle">
+						  <span class="micon bi bi-file-earmark-text"></span
+						  ><span class="mtext">Review </span>
+						</a>
+						<ul class="submenu">
+						  <li><a href="../Product/ReviewUpdat.html">Follow up width review</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+                        <a href="javascript:;" class="dropdown-toggle">
+                          <span class="micon bi bi-file-earmark-text"></span
+                          ><span class="mtext">Voucher </span>
+                        </a>
+                        <ul class="submenu">
+                          <li><a href="../Voucher/showVoucher.html">ALL Voucher</a></li>
+                          <li><a href="../Voucher/AddVoucher.html">Add Voucher</a></li>
+                        </ul>
+                    </li>
+					<li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
+						  <span class="micon bi bi-file-earmark-text"></span
+						  ><span class="mtext">Orders </span>
+						</a>
+						<ul class="submenu">
+							<li><a href="../Order/AllOrder.html">ALL Order</a></li>
+							<li><a href="../Order/GetOrder.html">Search By Email</a></li>
+						</ul>
+					</li>
+				    <li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
+						  <span class="micon bi bi-file-earmark-text"></span
+						  ><span class="mtext">Contact </span>
+						</a>
+						<ul class="submenu">
+						  <li><a href="../Contact/Contact Us.html">ALL Contact</a></li>
+						  <li><a href="../Contact/ReplyAdmin.html">Reply Contact</a></li>
+						</ul>
+					  </li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="mobile-menu-overlay"></div>
+
+	<div class="main-container">
+		<div class="pd-ltr-20">
+			<h1>All Categories</h1>
+			
+			<br>
+			<br> <br> <br>
+			<button type="button" class="btn btn-primary"  onclick="window.location.href='../category/addCategory.html'">Add Category</button>
+			<br><br>
+			<div class="table-container">
+				<table class="table table-bordered table-hover table-responsive-sm table-sm shadow-sm">
+					<thead class="text-center">
+						<tr>
+							<th scope="col" class="table-warning">Category Id</th>
+							<th scope="col" class="table-warning">Category Name</th>
+							<th scope="col" class="table-warning"> Description</th>
+							<th scope="col" class="table-warning">Category Image</th>
+							<th scope="col" class="table-warning">Action</th>
+						</tr>
+					</thead>
+					<tbody id="container" class="text-center">
+						<!-- Content will be dynamically added here -->
+					</tbody>
+				</table>
+			</div>
+	
+			<!-- HTML for Pagination Controls -->
+			<div id="pagination-container" class="d-flex justify-content-center mt-4"></div>
+		</div>
+	</div>
+	
+	<script>
+
+		function logout() {
+				localStorage.removeItem("jwtToken");
+				localStorage.removeItem("UserId");
+				window.location.href = "../../index_2.html";
+			  }
+		</script>
+	
+	<!-- js -->
+	<script src="../vendors/scripts/core.js"></script>
+	<script src="../vendors/scripts/script.min.js"></script>
+	<script src="../vendors/scripts/process.js"></script>
+	<script src="../vendors/scripts/layout-settings.js"></script>
+	<script src="../src/plugins/apexcharts/apexcharts.min.js"></script>
+	<script src="../src/plugins/datatables/js/jquery.dataTables.min.js"></script>
+	<script src="../src/plugins/datatables/js/dataTables.bootstrap4.min.js"></script>
+	<script src="../src/plugins/datatables/js/dataTables.responsive.min.js"></script>
+	<script src="../src/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
+	<script src="../vendors/scripts/dashboard.js"></script>
+	<script src="AllCategory.js"></script>
+	
+</body>
+
+</html>

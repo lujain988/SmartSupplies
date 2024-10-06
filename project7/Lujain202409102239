@@ -1,0 +1,326 @@
+2024-09-10 22:39:11.414 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44381/api/Cart/getallitems/11 - null null
+2024-09-10 22:39:11.423 +03:00 [INF] CORS policy execution successful.
+2024-09-10 22:39:11.454 +03:00 [INF] Executing endpoint 'project7.Controllers.CartController.Getallproduct (project7)'
+2024-09-10 22:39:11.454 +03:00 [INF] Route matched with {action = "Getallproduct", controller = "Cart"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Getallproduct(Int32) on controller project7.Controllers.CartController (project7).
+2024-09-10 22:39:11.455 +03:00 [INF] Executing OkObjectResult, writing value of type 'Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[[project7.DTO.CartDTO, project7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-10 22:39:11.459 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[ID] AS [Id], [c].[Quantity], [c].[UserID] AS [UserId], [c].[ProductID] AS [ProductId], [p].[ProductName], [p].[Image], [p].[Price]
+FROM [Cart] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[ProductID] = [p].[ID]
+WHERE [c].[UserID] = @__id_0
+2024-09-10 22:39:11.460 +03:00 [INF] Executed action project7.Controllers.CartController.Getallproduct (project7) in 5.5809ms
+2024-09-10 22:39:11.460 +03:00 [INF] Executed endpoint 'project7.Controllers.CartController.Getallproduct (project7)'
+2024-09-10 22:39:11.460 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44381/api/Cart/getallitems/11 - 200 null application/json; charset=utf-8 46.4262ms
+2024-09-10 22:39:11.555 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44381/swagger/index.html - null null
+2024-09-10 22:39:11.560 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44381/swagger/index.html - 200 null text/html;charset=utf-8 4.1611ms
+2024-09-10 22:39:11.601 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44381/api/Order/GetCart/11 - null null
+2024-09-10 22:39:11.601 +03:00 [INF] CORS policy execution successful.
+2024-09-10 22:39:11.601 +03:00 [INF] Executing endpoint 'project7.Controllers.OrderController.GetCartByUserId (project7)'
+2024-09-10 22:39:11.602 +03:00 [INF] Route matched with {action = "GetCartByUserId", controller = "Order"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult GetCartByUserId(Int32) on controller project7.Controllers.OrderController (project7).
+2024-09-10 22:39:11.604 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[UserID] AS [UserId], [c].[ProductID] AS [ProductId], [c].[Quantity], [p].[ProductName], [p].[Price]
+FROM [Cart] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[ProductID] = [p].[ID]
+WHERE [c].[UserID] = @__id_0
+2024-09-10 22:39:11.604 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[project7.DTOs.CartRequestDTO, project7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-10 22:39:11.605 +03:00 [INF] Executed action project7.Controllers.OrderController.GetCartByUserId (project7) in 3.1373ms
+2024-09-10 22:39:11.605 +03:00 [INF] Executed endpoint 'project7.Controllers.OrderController.GetCartByUserId (project7)'
+2024-09-10 22:39:11.605 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44381/api/Order/GetCart/11 - 200 null application/json; charset=utf-8 4.0086ms
+2024-09-10 22:39:11.610 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44381/api/Order/GetCart/11 - null null
+2024-09-10 22:39:11.610 +03:00 [INF] CORS policy execution successful.
+2024-09-10 22:39:11.611 +03:00 [INF] Executing endpoint 'project7.Controllers.OrderController.GetCartByUserId (project7)'
+2024-09-10 22:39:11.611 +03:00 [INF] Route matched with {action = "GetCartByUserId", controller = "Order"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult GetCartByUserId(Int32) on controller project7.Controllers.OrderController (project7).
+2024-09-10 22:39:11.613 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[UserID] AS [UserId], [c].[ProductID] AS [ProductId], [c].[Quantity], [p].[ProductName], [p].[Price]
+FROM [Cart] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[ProductID] = [p].[ID]
+WHERE [c].[UserID] = @__id_0
+2024-09-10 22:39:11.613 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[project7.DTOs.CartRequestDTO, project7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-10 22:39:11.614 +03:00 [INF] Executed action project7.Controllers.OrderController.GetCartByUserId (project7) in 2.5077ms
+2024-09-10 22:39:11.614 +03:00 [INF] Executed endpoint 'project7.Controllers.OrderController.GetCartByUserId (project7)'
+2024-09-10 22:39:11.614 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44381/api/Order/GetCart/11 - 200 null application/json; charset=utf-8 3.5925ms
+2024-09-10 22:39:11.665 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44381/api/Order/GetCart/11 - null null
+2024-09-10 22:39:11.665 +03:00 [INF] CORS policy execution successful.
+2024-09-10 22:39:11.669 +03:00 [INF] Executing endpoint 'project7.Controllers.OrderController.GetCartByUserId (project7)'
+2024-09-10 22:39:11.669 +03:00 [INF] Route matched with {action = "GetCartByUserId", controller = "Order"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult GetCartByUserId(Int32) on controller project7.Controllers.OrderController (project7).
+2024-09-10 22:39:11.686 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[UserID] AS [UserId], [c].[ProductID] AS [ProductId], [c].[Quantity], [p].[ProductName], [p].[Price]
+FROM [Cart] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[ProductID] = [p].[ID]
+WHERE [c].[UserID] = @__id_0
+2024-09-10 22:39:11.686 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[project7.DTOs.CartRequestDTO, project7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-10 22:39:11.687 +03:00 [INF] Executed action project7.Controllers.OrderController.GetCartByUserId (project7) in 18.0014ms
+2024-09-10 22:39:11.687 +03:00 [INF] Executed endpoint 'project7.Controllers.OrderController.GetCartByUserId (project7)'
+2024-09-10 22:39:11.687 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44381/api/Order/GetCart/11 - 200 null application/json; charset=utf-8 22.1599ms
+2024-09-10 22:39:11.689 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44381/api/Order/GetCart/11 - null null
+2024-09-10 22:39:11.689 +03:00 [INF] CORS policy execution successful.
+2024-09-10 22:39:11.689 +03:00 [INF] Executing endpoint 'project7.Controllers.OrderController.GetCartByUserId (project7)'
+2024-09-10 22:39:11.689 +03:00 [INF] Route matched with {action = "GetCartByUserId", controller = "Order"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult GetCartByUserId(Int32) on controller project7.Controllers.OrderController (project7).
+2024-09-10 22:39:11.692 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[UserID] AS [UserId], [c].[ProductID] AS [ProductId], [c].[Quantity], [p].[ProductName], [p].[Price]
+FROM [Cart] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[ProductID] = [p].[ID]
+WHERE [c].[UserID] = @__id_0
+2024-09-10 22:39:11.692 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[project7.DTOs.CartRequestDTO, project7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-10 22:39:11.692 +03:00 [INF] Executed action project7.Controllers.OrderController.GetCartByUserId (project7) in 3.0579ms
+2024-09-10 22:39:11.693 +03:00 [INF] Executed endpoint 'project7.Controllers.OrderController.GetCartByUserId (project7)'
+2024-09-10 22:39:11.693 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44381/api/Order/GetCart/11 - 200 null application/json; charset=utf-8 3.5529ms
+2024-09-10 22:39:11.713 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44381/_vs/browserLink - null null
+2024-09-10 22:39:11.713 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44381/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-10 22:39:11.721 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44381/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 7.652ms
+2024-09-10 22:39:11.731 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44381/_vs/browserLink - 200 null text/javascript; charset=UTF-8 18.5945ms
+2024-09-10 22:39:12.118 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44381/swagger/v1/swagger.json - null null
+2024-09-10 22:39:12.139 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44381/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 20.827ms
+2024-09-10 22:39:12.178 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44381/api/Order/GetAllOrdersByUserEmail/ - null null
+2024-09-10 22:39:12.178 +03:00 [INF] CORS policy execution successful.
+2024-09-10 22:39:12.179 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44381/api/Order/GetAllOrdersByUserEmail/ - 404 null null 0.6446ms
+2024-09-10 22:39:12.179 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44381/api/Order/GetAllOrdersByUserEmail/, Response status code: 404
+2024-09-10 22:39:13.161 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44381/api/Cart/getallitems/11 - null null
+2024-09-10 22:39:13.161 +03:00 [INF] CORS policy execution successful.
+2024-09-10 22:39:13.161 +03:00 [INF] Executing endpoint 'project7.Controllers.CartController.Getallproduct (project7)'
+2024-09-10 22:39:13.161 +03:00 [INF] Route matched with {action = "Getallproduct", controller = "Cart"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Getallproduct(Int32) on controller project7.Controllers.CartController (project7).
+2024-09-10 22:39:13.162 +03:00 [INF] Executing OkObjectResult, writing value of type 'Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[[project7.DTO.CartDTO, project7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-10 22:39:13.165 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[ID] AS [Id], [c].[Quantity], [c].[UserID] AS [UserId], [c].[ProductID] AS [ProductId], [p].[ProductName], [p].[Image], [p].[Price]
+FROM [Cart] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[ProductID] = [p].[ID]
+WHERE [c].[UserID] = @__id_0
+2024-09-10 22:39:13.166 +03:00 [INF] Executed action project7.Controllers.CartController.Getallproduct (project7) in 4.9039ms
+2024-09-10 22:39:13.166 +03:00 [INF] Executed endpoint 'project7.Controllers.CartController.Getallproduct (project7)'
+2024-09-10 22:39:13.167 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44381/api/Cart/getallitems/11 - 200 null application/json; charset=utf-8 5.9659ms
+2024-09-10 22:39:13.316 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44381/api/Order/GetCart/11 - null null
+2024-09-10 22:39:13.316 +03:00 [INF] CORS policy execution successful.
+2024-09-10 22:39:13.316 +03:00 [INF] Executing endpoint 'project7.Controllers.OrderController.GetCartByUserId (project7)'
+2024-09-10 22:39:13.317 +03:00 [INF] Route matched with {action = "GetCartByUserId", controller = "Order"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult GetCartByUserId(Int32) on controller project7.Controllers.OrderController (project7).
+2024-09-10 22:39:13.321 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[UserID] AS [UserId], [c].[ProductID] AS [ProductId], [c].[Quantity], [p].[ProductName], [p].[Price]
+FROM [Cart] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[ProductID] = [p].[ID]
+WHERE [c].[UserID] = @__id_0
+2024-09-10 22:39:13.322 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[project7.DTOs.CartRequestDTO, project7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-10 22:39:13.322 +03:00 [INF] Executed action project7.Controllers.OrderController.GetCartByUserId (project7) in 5.4208ms
+2024-09-10 22:39:13.322 +03:00 [INF] Executed endpoint 'project7.Controllers.OrderController.GetCartByUserId (project7)'
+2024-09-10 22:39:13.322 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44381/api/Order/GetCart/11 - 200 null application/json; charset=utf-8 6.1223ms
+2024-09-10 22:39:13.344 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44381/api/Order/GetCart/11 - null null
+2024-09-10 22:39:13.344 +03:00 [INF] CORS policy execution successful.
+2024-09-10 22:39:13.344 +03:00 [INF] Executing endpoint 'project7.Controllers.OrderController.GetCartByUserId (project7)'
+2024-09-10 22:39:13.344 +03:00 [INF] Route matched with {action = "GetCartByUserId", controller = "Order"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult GetCartByUserId(Int32) on controller project7.Controllers.OrderController (project7).
+2024-09-10 22:39:13.347 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[UserID] AS [UserId], [c].[ProductID] AS [ProductId], [c].[Quantity], [p].[ProductName], [p].[Price]
+FROM [Cart] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[ProductID] = [p].[ID]
+WHERE [c].[UserID] = @__id_0
+2024-09-10 22:39:13.347 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[project7.DTOs.CartRequestDTO, project7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-10 22:39:13.347 +03:00 [INF] Executed action project7.Controllers.OrderController.GetCartByUserId (project7) in 3.1238ms
+2024-09-10 22:39:13.347 +03:00 [INF] Executed endpoint 'project7.Controllers.OrderController.GetCartByUserId (project7)'
+2024-09-10 22:39:13.347 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44381/api/Order/GetCart/11 - 200 null application/json; charset=utf-8 3.7587ms
+2024-09-10 22:39:13.378 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44381/api/Order/GetCart/11 - null null
+2024-09-10 22:39:13.378 +03:00 [INF] CORS policy execution successful.
+2024-09-10 22:39:13.378 +03:00 [INF] Executing endpoint 'project7.Controllers.OrderController.GetCartByUserId (project7)'
+2024-09-10 22:39:13.378 +03:00 [INF] Route matched with {action = "GetCartByUserId", controller = "Order"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult GetCartByUserId(Int32) on controller project7.Controllers.OrderController (project7).
+2024-09-10 22:39:13.381 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[UserID] AS [UserId], [c].[ProductID] AS [ProductId], [c].[Quantity], [p].[ProductName], [p].[Price]
+FROM [Cart] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[ProductID] = [p].[ID]
+WHERE [c].[UserID] = @__id_0
+2024-09-10 22:39:13.381 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[project7.DTOs.CartRequestDTO, project7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-10 22:39:13.381 +03:00 [INF] Executed action project7.Controllers.OrderController.GetCartByUserId (project7) in 2.8115ms
+2024-09-10 22:39:13.381 +03:00 [INF] Executed endpoint 'project7.Controllers.OrderController.GetCartByUserId (project7)'
+2024-09-10 22:39:13.381 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44381/api/Order/GetCart/11 - 200 null application/json; charset=utf-8 3.7631ms
+2024-09-10 22:39:13.419 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44381/api/Order/GetCart/11 - null null
+2024-09-10 22:39:13.419 +03:00 [INF] CORS policy execution successful.
+2024-09-10 22:39:13.419 +03:00 [INF] Executing endpoint 'project7.Controllers.OrderController.GetCartByUserId (project7)'
+2024-09-10 22:39:13.420 +03:00 [INF] Route matched with {action = "GetCartByUserId", controller = "Order"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult GetCartByUserId(Int32) on controller project7.Controllers.OrderController (project7).
+2024-09-10 22:39:13.421 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[UserID] AS [UserId], [c].[ProductID] AS [ProductId], [c].[Quantity], [p].[ProductName], [p].[Price]
+FROM [Cart] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[ProductID] = [p].[ID]
+WHERE [c].[UserID] = @__id_0
+2024-09-10 22:39:13.421 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[project7.DTOs.CartRequestDTO, project7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-10 22:39:13.422 +03:00 [INF] Executed action project7.Controllers.OrderController.GetCartByUserId (project7) in 2.1506ms
+2024-09-10 22:39:13.422 +03:00 [INF] Executed endpoint 'project7.Controllers.OrderController.GetCartByUserId (project7)'
+2024-09-10 22:39:13.422 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44381/api/Order/GetCart/11 - 200 null application/json; charset=utf-8 3.0111ms
+2024-09-10 22:39:13.570 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44381/api/Order/GetAllOrdersByUserEmail/ - null null
+2024-09-10 22:39:13.570 +03:00 [INF] CORS policy execution successful.
+2024-09-10 22:39:13.571 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44381/api/Order/GetAllOrdersByUserEmail/ - 404 null null 0.7631ms
+2024-09-10 22:39:13.571 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44381/api/Order/GetAllOrdersByUserEmail/, Response status code: 404
+2024-09-10 22:39:18.144 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44381/api/Order/GetCart/11 - null null
+2024-09-10 22:39:18.144 +03:00 [INF] CORS policy execution successful.
+2024-09-10 22:39:18.144 +03:00 [INF] Executing endpoint 'project7.Controllers.OrderController.GetCartByUserId (project7)'
+2024-09-10 22:39:18.144 +03:00 [INF] Route matched with {action = "GetCartByUserId", controller = "Order"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult GetCartByUserId(Int32) on controller project7.Controllers.OrderController (project7).
+2024-09-10 22:39:18.147 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[UserID] AS [UserId], [c].[ProductID] AS [ProductId], [c].[Quantity], [p].[ProductName], [p].[Price]
+FROM [Cart] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[ProductID] = [p].[ID]
+WHERE [c].[UserID] = @__id_0
+2024-09-10 22:39:18.147 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[project7.DTOs.CartRequestDTO, project7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-10 22:39:18.147 +03:00 [INF] Executed action project7.Controllers.OrderController.GetCartByUserId (project7) in 2.9864ms
+2024-09-10 22:39:18.148 +03:00 [INF] Executed endpoint 'project7.Controllers.OrderController.GetCartByUserId (project7)'
+2024-09-10 22:39:18.148 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44381/api/Order/GetCart/11 - 200 null application/json; charset=utf-8 3.6908ms
+2024-09-10 22:39:19.727 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44381/api/Cart/getallitems/11 - null null
+2024-09-10 22:39:19.727 +03:00 [INF] CORS policy execution successful.
+2024-09-10 22:39:19.727 +03:00 [INF] Executing endpoint 'project7.Controllers.CartController.Getallproduct (project7)'
+2024-09-10 22:39:19.727 +03:00 [INF] Route matched with {action = "Getallproduct", controller = "Cart"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Getallproduct(Int32) on controller project7.Controllers.CartController (project7).
+2024-09-10 22:39:19.728 +03:00 [INF] Executing OkObjectResult, writing value of type 'Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[[project7.DTO.CartDTO, project7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-10 22:39:19.730 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[ID] AS [Id], [c].[Quantity], [c].[UserID] AS [UserId], [c].[ProductID] AS [ProductId], [p].[ProductName], [p].[Image], [p].[Price]
+FROM [Cart] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[ProductID] = [p].[ID]
+WHERE [c].[UserID] = @__id_0
+2024-09-10 22:39:19.731 +03:00 [INF] Executed action project7.Controllers.CartController.Getallproduct (project7) in 3.5989ms
+2024-09-10 22:39:19.731 +03:00 [INF] Executed endpoint 'project7.Controllers.CartController.Getallproduct (project7)'
+2024-09-10 22:39:19.731 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44381/api/Cart/getallitems/11 - 200 null application/json; charset=utf-8 4.3474ms
+2024-09-10 22:39:25.770 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44381/api/Cart/copon/new2024 - null null
+2024-09-10 22:39:25.770 +03:00 [INF] CORS policy execution successful.
+2024-09-10 22:39:25.771 +03:00 [INF] Executing endpoint 'project7.Controllers.CartController.chickcopobn (project7)'
+2024-09-10 22:39:25.771 +03:00 [INF] Route matched with {action = "chickcopobn", controller = "Cart"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult chickcopobn(System.String) on controller project7.Controllers.CartController (project7).
+2024-09-10 22:39:25.774 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__name_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [v].[ID], [v].[Code], [v].[DiscountAmount], [v].[ExpirationDate], [v].[IsActive], [v].[OrderID]
+FROM [Vouchers] AS [v]
+WHERE [v].[Code] = @__name_0 AND [v].[ExpirationDate] >= GETDATE() AND [v].[IsActive] = CAST(1 AS bit)
+2024-09-10 22:39:25.774 +03:00 [INF] Executing OkObjectResult, writing value of type 'project7.Models.Voucher'.
+2024-09-10 22:39:25.774 +03:00 [INF] Executed action project7.Controllers.CartController.chickcopobn (project7) in 3.7383ms
+2024-09-10 22:39:25.774 +03:00 [INF] Executed endpoint 'project7.Controllers.CartController.chickcopobn (project7)'
+2024-09-10 22:39:25.775 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44381/api/Cart/copon/new2024 - 200 null application/json; charset=utf-8 4.273ms
+2024-09-10 22:39:26.912 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44381/api/Order/GetCart/11 - null null
+2024-09-10 22:39:26.913 +03:00 [INF] CORS policy execution successful.
+2024-09-10 22:39:26.913 +03:00 [INF] Executing endpoint 'project7.Controllers.OrderController.GetCartByUserId (project7)'
+2024-09-10 22:39:26.913 +03:00 [INF] Route matched with {action = "GetCartByUserId", controller = "Order"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult GetCartByUserId(Int32) on controller project7.Controllers.OrderController (project7).
+2024-09-10 22:39:26.914 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[UserID] AS [UserId], [c].[ProductID] AS [ProductId], [c].[Quantity], [p].[ProductName], [p].[Price]
+FROM [Cart] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[ProductID] = [p].[ID]
+WHERE [c].[UserID] = @__id_0
+2024-09-10 22:39:26.914 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[project7.DTOs.CartRequestDTO, project7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-10 22:39:26.914 +03:00 [INF] Executed action project7.Controllers.OrderController.GetCartByUserId (project7) in 1.5958ms
+2024-09-10 22:39:26.914 +03:00 [INF] Executed endpoint 'project7.Controllers.OrderController.GetCartByUserId (project7)'
+2024-09-10 22:39:26.915 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44381/api/Order/GetCart/11 - 200 null application/json; charset=utf-8 2.1438ms
+2024-09-10 22:39:30.005 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44381/api/Order/GetUserAddress - multipart/form-data; boundary=----WebKitFormBoundary7qPAr6UVCG44jpfg 639
+2024-09-10 22:39:30.005 +03:00 [INF] CORS policy execution successful.
+2024-09-10 22:39:30.005 +03:00 [INF] Executing endpoint 'project7.Controllers.OrderController.GetUserAddress (project7)'
+2024-09-10 22:39:30.005 +03:00 [INF] Route matched with {action = "GetUserAddress", controller = "Order"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUserAddress(project7.DTOs.AddressDTO) on controller project7.Controllers.OrderController (project7).
+2024-09-10 22:39:30.011 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 255), @p1='?' (Size = 100), @p2='?' (Size = 100), @p3='?' (Size = 15), @p4='?' (Size = 20), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Addresses] ([AddressLine], [City], [Country], [PhoneNumber], [PostalCode], [UserID])
+OUTPUT INSERTED.[ID]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2024-09-10 22:39:30.011 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2024-09-10 22:39:30.011 +03:00 [INF] Executed action project7.Controllers.OrderController.GetUserAddress (project7) in 5.6973ms
+2024-09-10 22:39:30.011 +03:00 [INF] Executed endpoint 'project7.Controllers.OrderController.GetUserAddress (project7)'
+2024-09-10 22:39:30.011 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44381/api/Order/GetUserAddress - 200 null null 6.4077ms
+2024-09-10 22:39:30.014 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44381/api/Order/AddNewOrderByUserId - null null
+2024-09-10 22:39:30.014 +03:00 [INF] CORS policy execution successful.
+2024-09-10 22:39:30.014 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44381/api/Order/AddNewOrderByUserId - 204 null null 0.2099ms
+2024-09-10 22:39:30.014 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44381/api/Payment/AddToPaymentTableByOrderId/142 - null null
+2024-09-10 22:39:30.014 +03:00 [INF] CORS policy execution successful.
+2024-09-10 22:39:30.014 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44381/api/Payment/AddToPaymentTableByOrderId/142 - 204 null null 0.1495ms
+2024-09-10 22:39:30.014 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44381/api/Order/GetLastOrderIdByUserId/11 - null null
+2024-09-10 22:39:30.014 +03:00 [INF] CORS policy execution successful.
+2024-09-10 22:39:30.014 +03:00 [INF] Executing endpoint 'project7.Controllers.OrderController.GetLastOrderIdByUserId (project7)'
+2024-09-10 22:39:30.014 +03:00 [INF] Route matched with {action = "GetLastOrderIdByUserId", controller = "Order"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetLastOrderIdByUserId(Int32) on controller project7.Controllers.OrderController (project7).
+2024-09-10 22:39:30.015 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44381/api/Order/AddNewOrderByUserId - application/json 11
+2024-09-10 22:39:30.015 +03:00 [INF] CORS policy execution successful.
+2024-09-10 22:39:30.015 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44381/api/Payment/AddToPaymentTableByOrderId/142 - application/json 22
+2024-09-10 22:39:30.015 +03:00 [INF] CORS policy execution successful.
+2024-09-10 22:39:30.015 +03:00 [INF] Executing endpoint 'project7.Controllers.OrderController.AddNewOrder (project7)'
+2024-09-10 22:39:30.015 +03:00 [INF] Route matched with {action = "AddNewOrder", controller = "Order"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddNewOrder(project7.Controllers.AddNewOrderByUserId) on controller project7.Controllers.OrderController (project7).
+2024-09-10 22:39:30.015 +03:00 [INF] Executing endpoint 'project7.Controllers.PaymentController.AddToPaymentTable (project7)'
+2024-09-10 22:39:30.016 +03:00 [INF] Route matched with {action = "AddToPaymentTable", controller = "Payment"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult AddToPaymentTable(Int32, project7.DTOs.PaymentsDTO) on controller project7.Controllers.PaymentController (project7).
+2024-09-10 22:39:30.019 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [o].[ID], [o].[LoyaltyPoints], [o].[OrderDate], [o].[ProductId], [o].[Quantity], [o].[Status], [o].[TotalAmount], [o].[transactionId], [o].[UserID]
+FROM [Orders] AS [o]
+WHERE [o].[UserID] = @__id_0
+ORDER BY [o].[OrderDate] DESC
+2024-09-10 22:39:30.019 +03:00 [INF] Executing OkObjectResult, writing value of type 'project7.Models.Order'.
+2024-09-10 22:39:30.019 +03:00 [INF] Executed action project7.Controllers.OrderController.GetLastOrderIdByUserId (project7) in 5.0749ms
+2024-09-10 22:39:30.019 +03:00 [INF] Executed endpoint 'project7.Controllers.OrderController.GetLastOrderIdByUserId (project7)'
+2024-09-10 22:39:30.020 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44381/api/Order/GetLastOrderIdByUserId/11 - 200 null application/json; charset=utf-8 5.5165ms
+2024-09-10 22:39:30.022 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__addNewOrderByUserId_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[ID], [c].[ProductID], [c].[Quantity], [c].[UserID]
+FROM [Cart] AS [c]
+WHERE [c].[UserID] = @__addNewOrderByUserId_Id_0
+2024-09-10 22:39:30.027 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__item_ProductId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Price]
+FROM [Products] AS [p]
+WHERE [p].[ID] = @__item_ProductId_0
+2024-09-10 22:39:30.030 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (Size = 50), @p5='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p6='?' (Size = 255) (DbType = AnsiString), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Orders] ([LoyaltyPoints], [OrderDate], [ProductId], [Quantity], [Status], [TotalAmount], [transactionId], [UserID])
+OUTPUT INSERTED.[ID]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2024-09-10 22:39:30.031 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__item_ProductId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Price]
+FROM [Products] AS [p]
+WHERE [p].[ID] = @__item_ProductId_0
+2024-09-10 22:39:30.031 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-10 22:39:30.031 +03:00 [INF] Executed action project7.Controllers.PaymentController.AddToPaymentTable (project7) in 15.8411ms
+2024-09-10 22:39:30.031 +03:00 [INF] Executed endpoint 'project7.Controllers.PaymentController.AddToPaymentTable (project7)'
+2024-09-10 22:39:30.032 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (Size = 50), @p5='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p6='?' (Size = 255) (DbType = AnsiString), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Orders] ([LoyaltyPoints], [OrderDate], [ProductId], [Quantity], [Status], [TotalAmount], [transactionId], [UserID])
+OUTPUT INSERTED.[ID]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2024-09-10 22:39:30.032 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44381/api/Payment/AddToPaymentTableByOrderId/142 - 400 null application/problem+json; charset=utf-8 16.1944ms
+2024-09-10 22:39:30.032 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__item_ProductId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Price]
+FROM [Products] AS [p]
+WHERE [p].[ID] = @__item_ProductId_0
+2024-09-10 22:39:30.033 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (Size = 50), @p5='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p6='?' (Size = 255) (DbType = AnsiString), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Orders] ([LoyaltyPoints], [OrderDate], [ProductId], [Quantity], [Status], [TotalAmount], [transactionId], [UserID])
+OUTPUT INSERTED.[ID]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2024-09-10 22:39:30.033 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__item_ProductId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Price]
+FROM [Products] AS [p]
+WHERE [p].[ID] = @__item_ProductId_0
+2024-09-10 22:39:30.034 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (Size = 50), @p5='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p6='?' (Size = 255) (DbType = AnsiString), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Orders] ([LoyaltyPoints], [OrderDate], [ProductId], [Quantity], [Status], [TotalAmount], [transactionId], [UserID])
+OUTPUT INSERTED.[ID]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2024-09-10 22:39:30.034 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__item_ProductId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Price]
+FROM [Products] AS [p]
+WHERE [p].[ID] = @__item_ProductId_0
+2024-09-10 22:39:30.035 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (Size = 50), @p5='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p6='?' (Size = 255) (DbType = AnsiString), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Orders] ([LoyaltyPoints], [OrderDate], [ProductId], [Quantity], [Status], [TotalAmount], [transactionId], [UserID])
+OUTPUT INSERTED.[ID]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2024-09-10 22:39:30.035 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[project7.Models.Cart, project7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-10 22:39:30.035 +03:00 [INF] Executed action project7.Controllers.OrderController.AddNewOrder (project7) in 19.7355ms
+2024-09-10 22:39:30.035 +03:00 [INF] Executed endpoint 'project7.Controllers.OrderController.AddNewOrder (project7)'
+2024-09-10 22:39:30.035 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44381/api/Order/AddNewOrderByUserId - 200 null application/json; charset=utf-8 20.1276ms
+2024-09-10 22:39:31.282 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44381/api/Order/GetCart/11 - null null
+2024-09-10 22:39:31.282 +03:00 [INF] CORS policy execution successful.
+2024-09-10 22:39:31.282 +03:00 [INF] Executing endpoint 'project7.Controllers.OrderController.GetCartByUserId (project7)'
+2024-09-10 22:39:31.282 +03:00 [INF] Route matched with {action = "GetCartByUserId", controller = "Order"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult GetCartByUserId(Int32) on controller project7.Controllers.OrderController (project7).
+2024-09-10 22:39:31.284 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[UserID] AS [UserId], [c].[ProductID] AS [ProductId], [c].[Quantity], [p].[ProductName], [p].[Price]
+FROM [Cart] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[ProductID] = [p].[ID]
+WHERE [c].[UserID] = @__id_0
+2024-09-10 22:39:31.284 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[project7.DTOs.CartRequestDTO, project7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-10 22:39:31.285 +03:00 [INF] Executed action project7.Controllers.OrderController.GetCartByUserId (project7) in 2.5429ms
+2024-09-10 22:39:31.285 +03:00 [INF] Executed endpoint 'project7.Controllers.OrderController.GetCartByUserId (project7)'
+2024-09-10 22:39:31.285 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44381/api/Order/GetCart/11 - 200 null application/json; charset=utf-8 3.4038ms
+2024-09-10 22:39:55.163 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44381/api/Order/GetCart/11 - null null
+2024-09-10 22:39:55.163 +03:00 [INF] CORS policy execution successful.
+2024-09-10 22:39:55.163 +03:00 [INF] Executing endpoint 'project7.Controllers.OrderController.GetCartByUserId (project7)'
+2024-09-10 22:39:55.163 +03:00 [INF] Route matched with {action = "GetCartByUserId", controller = "Order"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult GetCartByUserId(Int32) on controller project7.Controllers.OrderController (project7).
+2024-09-10 22:39:55.165 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[UserID] AS [UserId], [c].[ProductID] AS [ProductId], [c].[Quantity], [p].[ProductName], [p].[Price]
+FROM [Cart] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[ProductID] = [p].[ID]
+WHERE [c].[UserID] = @__id_0
+2024-09-10 22:39:55.165 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[project7.DTOs.CartRequestDTO, project7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-10 22:39:55.165 +03:00 [INF] Executed action project7.Controllers.OrderController.GetCartByUserId (project7) in 2.0591ms
+2024-09-10 22:39:55.166 +03:00 [INF] Executed endpoint 'project7.Controllers.OrderController.GetCartByUserId (project7)'
+2024-09-10 22:39:55.166 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44381/api/Order/GetCart/11 - 200 null application/json; charset=utf-8 3.004ms
